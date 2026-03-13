@@ -4,7 +4,9 @@ import {
 } from 'src/common/repositories/repository.types';
 import { MaterialEntity } from '../entities/material.entity';
 import { MaterialRepository } from '../repositories/material.repository';
+import { Injectable } from '@nestjs/common';
 
+@Injectable()
 export class MaterialService {
   constructor(public readonly materialRepository: MaterialRepository) {}
 

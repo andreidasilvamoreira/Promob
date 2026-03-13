@@ -4,9 +4,11 @@ import {
 } from 'src/common/repositories/repository.types';
 import { UserEntity } from '../entities/user.entity';
 import { UserRepository } from '../repositories/user.repository';
+import { Injectable } from '@nestjs/common';
 
+@Injectable()
 export class UserService {
-  constructor(public readonly userRepository: UserRepository) {}
+  constructor(private readonly userRepository: UserRepository) {}
 
   async findAll(): Promise<UserEntity[]> {
     return this.userRepository.findAll();

@@ -4,7 +4,9 @@ import {
 } from 'src/common/repositories/repository.types';
 import { ClientRepository } from '../repositories/client.repository';
 import { ClientEntity } from '../entities/client.entity';
+import { Injectable } from '@nestjs/common';
 
+@Injectable()
 export class ClientService {
   constructor(public readonly clientRepository: ClientRepository) {}
 

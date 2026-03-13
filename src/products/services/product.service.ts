@@ -4,7 +4,9 @@ import {
 } from 'src/common/repositories/repository.types';
 import { ProductEntity } from '../entities/product.entity';
 import { ProductRepository } from '../repositories/product.repository';
+import { Injectable } from '@nestjs/common';
 
+@Injectable()
 export class ProductService {
   constructor(public readonly productRepository: ProductRepository) {}
 

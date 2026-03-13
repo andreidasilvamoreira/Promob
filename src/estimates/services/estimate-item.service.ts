@@ -4,7 +4,9 @@ import {
 } from 'src/common/repositories/repository.types';
 import { EstimateItemRepository } from '../repositories/estimate-item.repository';
 import { EstimateItemEntity } from '../entities/estimate-item.entity';
+import { Injectable } from '@nestjs/common';
 
+@Injectable()
 export class EstimateItemService {
   constructor(public readonly estimateItemRepository: EstimateItemRepository) {}
 
